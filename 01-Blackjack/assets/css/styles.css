@@ -1,0 +1,116 @@
+html, body {
+  margin: 0;
+  background-color: #2F4F30;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100%;
+}
+
+header {
+  background-color: #000;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.cards-container {
+  min-height: 240px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cards {
+  width: 120px;
+  margin: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Deck counter styles */
+#deck-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Arial', sans-serif;
+  border: 1px solid rgba(255,255,255,0.1);
+  min-width: 100px;
+  text-align: center;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+#deck-counter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.counter-label {
+  font-size: 0.8em;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.counter-value {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* Background color classes for deck counter */
+#deck-counter.bg-high {
+  background: linear-gradient(145deg, #1e3c72, #2a5298) !important;
+}
+
+#deck-counter.bg-medium {
+  background: linear-gradient(145deg, #e67e22, #d35400) !important;
+}
+
+#deck-counter.bg-low {
+  background: linear-gradient(145deg, #c31432, #240b36) !important;
+}
+
+/* Game message container styles */
+#game-message {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 25px;
+  background-color: rgba(0,0,0,0.85);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  text-align: center;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  user-select: none;
+}

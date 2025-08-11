@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./01-Blackjack/assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="text-center bg-dark py-3 mb-4">
+      <h1 class="text-white">Blackjack</h1>
+    </header>
+
+    <main class="container">
+      <div class="row mb-3 justify-content-center">
+        <div class="col-auto">
+          <button id="btnNew" class="btn btn-danger mx-1">New game</button>
+          <button id="btnHit" class="btn btn-primary mx-1" disabled>Hit</button>
+          <button id="btnStand" class="btn btn-primary mx-1" disabled>
+            Stand
+          </button>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-6 mb-4">
+          <h2>Player - <small>0</small></h2>
+          <div
+            id="ply-cards"
+            class="cards-container d-flex justify-content-center flex-wrap"
+          ></div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h2>Computer - <small>0</small></h2>
+          <div
+            id="comp-cards"
+            class="cards-container d-flex justify-content-center flex-wrap"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./01-Blackjack/assets/js/underscore-min.js"></script>
+    <script src="./01-Blackjack/assets/js/bundle-min.js"></script>
+    <script>
+      console.log(blackjackModule);
+      blackjackModule.newGame();
+    </script>
+  </body>
+</html>
